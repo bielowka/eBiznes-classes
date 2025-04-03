@@ -1,0 +1,2 @@
+Each tag name references mark (e.g. 3.0, 3.5, 4.0)
+https://hub.docker.com/r/bielowka/ebiznes-zad1/tags
