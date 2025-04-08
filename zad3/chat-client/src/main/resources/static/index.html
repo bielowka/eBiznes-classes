@@ -8,7 +8,7 @@
 <body>
 <h1>Send Message to Discord</h1>
 <form action="/send" method="post">
-    <textarea name="content" rows="4" cols="50" placeholder="Write your message here..."></textarea><br>
+<textarea name="content" rows="4" cols="50" placeholder="Write your message here..." onkeydown="if(event.key === 'Enter') event.preventDefault();"></textarea><br>
     <button type="submit">Send Message</button>
 </form>
 </body>
