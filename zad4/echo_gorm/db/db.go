@@ -16,7 +16,7 @@ func ConnectDatabase() {
 
 	DB = db
 
-	errMigrate := db.AutoMigrate(&models.Product{})
+	errMigrate := db.AutoMigrate(&models.Product{}, &models.Basket{})
 	if errMigrate != nil {
 		return
 	}
