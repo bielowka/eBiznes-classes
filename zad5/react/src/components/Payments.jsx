@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { sendPayment } from "../services/api";
+import { useBasket } from "../context/BasketContext.jsx";
 
-const Payments = ({ basket }) => {
+const Payments = () => {
+    const { basket } = useBasket();
     const total = basket.reduce((sum, item) => sum + item.price, 0);
 
     const handleSubmit = async () => {
@@ -21,7 +23,9 @@ const Payments = ({ basket }) => {
         <div>
             <h2>Payments</h2>
             <p>Total to pay: ${total.toFixed(2)}</p>
-            <button onClick={handleSubmit}>Pay</button>
+            <button onClick={handleSubmit} disabled={basket.length === 0}>
+                Pay
+            </button>
         </div>
     );
 };

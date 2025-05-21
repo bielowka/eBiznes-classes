@@ -1,20 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Products from "./components/Products";
 import Basket from "./components/Basket";
 import Payments from "./components/Payments";
 
 const App = () => {
-    const [basket, setBasket] = useState([]);
-
-    const handleAddToBasket = (product) => {
-        setBasket([...basket, product]);
-    };
-
-    const handleRemoveFromBasket = (index) => {
-        setBasket(basket.filter((_, i) => i !== index));
-    };
-
     return (
         <Router>
             <nav>
@@ -24,9 +14,9 @@ const App = () => {
             </nav>
 
             <Routes>
-                <Route path="/" element={<Products onAddToBasket={handleAddToBasket} />} />
-                <Route path="/basket" element={<Basket items={basket} onRemove={handleRemoveFromBasket} />} />
-                <Route path="/payments" element={<Payments basket={basket} />} />
+                <Route path="/" element={<Products />} />
+                <Route path="/basket" element={<Basket />} />
+                <Route path="/payments" element={<Payments />} />
             </Routes>
         </Router>
     );

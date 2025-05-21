@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { fetchProducts } from "../services/api";
+import { useBasket } from "../context/BasketContext.jsx";
 
-const Products = ({ onAddToBasket }) => {
+const Products = () => {
     const [products, setProducts] = useState([]);
+    const { addToBasket } = useBasket();
 
     useEffect(() => {
         fetchProducts().then(setProducts).catch(console.error);
@@ -15,7 +17,7 @@ const Products = ({ onAddToBasket }) => {
                 {products.map((p) => (
                     <li key={p.id}>
                         {p.name} - ${p.price}
-                        <button onClick={() => onAddToBasket(p)}>Add to Basket</button>
+                        <button onClick={() => addToBasket(p)}>Add to Basket</button>
                     </li>
                 ))}
             </ul>
