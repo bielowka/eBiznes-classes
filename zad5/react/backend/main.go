@@ -7,15 +7,15 @@
  	"net/http"
  )
 
- type Product struct {
- 	ID    int     `json:"id"`
- 	Name  string  `json:"name"`
- 	Price float64 `json:"price"`
- }
+type Product struct {
+	ID    int     `json:"id"`
+	Name  string  `json:"name"`
+	Price float64 `json:"price"`
+}
 
 type Payment struct {
-	ProductName string  `json:"productName"`
-	Amount      float64 `json:"amount"`
+	Products []Product `json:"products"`
+	Total    float64   `json:"total"`
 }
 
  func main() {
@@ -53,7 +53,6 @@ func handlePayments(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	fmt.Printf("Received payment: %s - $%.2f\n", payment.ProductName, payment.Amount)
+	fmt.Printf("Received payment for %d items. Total: $%.2f\n", len(payment.Products), payment.Total)
 	w.WriteHeader(http.StatusOK)
 }
-

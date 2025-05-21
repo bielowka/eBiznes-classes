@@ -1,20 +1,17 @@
 import React, { useState } from "react";
 import { sendPayment } from "../services/api";
 
-const Payments = () => {
-    const [productName, setProductName] = useState("");
-    const [amount, setAmount] = useState("");
+const Payments = ({ basket }) => {
+    const total = basket.reduce((sum, item) => sum + item.price, 0);
 
     const handleSubmit = async () => {
-        const paymentData = {
-            productName: productName,
-            amount: Number(amount),
-        };
-
-        const response = await sendPayment(paymentData);
+        const response = await sendPayment({
+            products: basket,
+            total,
+        });
 
         if (response.status === 200) {
-            alert(`Payment sent for ${productName}: $${amount}`);
+            alert("Payment successful");
         } else {
             alert("Payment failed");
         }
@@ -23,19 +20,8 @@ const Payments = () => {
     return (
         <div>
             <h2>Payments</h2>
-            <input
-                type="text"
-                placeholder="Enter product name"
-                value={productName}
-                onChange={(e) => setProductName(e.target.value)}
-            />
-            <input
-                type="number"
-                placeholder="Enter amount"
-                value={amount}
-                onChange={(e) => setAmount(e.target.value)}
-            />
-            <button onClick={handleSubmit}>Send Payment</button>
+            <p>Total to pay: ${total.toFixed(2)}</p>
+            <button onClick={handleSubmit}>Pay</button>
         </div>
     );
 };
