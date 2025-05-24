@@ -44,3 +44,48 @@ Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad2
 
 
 Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad3
+
+**Zadanie 4** Go
+
+:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/529e00fb6e2ab7b6002933aafadf3eb1c46fe471)
+
+:white_check_mark: 3.5 wymaganie 2 [Link do commita 2](https://github.com/bielowka/eBiznes-classes/commit/5d77ef1b8b25457fabd9e14d40fb35bfb3c22a20)
+
+:white_check_mark: 4.0 wymaganie 3 [Link do commita 3](https://github.com/bielowka/eBiznes-classes/commit/5d77ef1b8b25457fabd9e14d40fb35bfb3c22a20)
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5
+
+
+Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad4
+
+**Zadanie 5** Frontend
+
+:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/5573b1e36e3762400698d1251b061b95e0fb9548)
+
+:white_check_mark: 3.5 wymaganie 2 [Link do commita 2](https://github.com/bielowka/eBiznes-classes/commit/1008e1ace9be6452eb3657f2bedd2a9b71a92110)
+
+:white_check_mark: 4.0 wymaganie 3 [Link do commita 3](https://github.com/bielowka/eBiznes-classes/commit/b0707ea190fec92484e329290a56d24c70b3fec2)
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5
+
+
+Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad5
+
+**Zadanie 6** Testy
+
+:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/95851d30615c20cd381af7ff0d1655cdf1699bf8)
+
+:white_check_mark: 3.5 wymaganie 2 [Link do commita 2](https://github.com/bielowka/eBiznes-classes/commit/95851d30615c20cd381af7ff0d1655cdf1699bf8)
+
+:x: 4.0 wymaganie 3
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5
+
+
+Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad6
