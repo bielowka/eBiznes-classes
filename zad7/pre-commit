@@ -1,0 +1,11 @@
+#!/bin/sh
+
+echo "Linting Go code in zad4"
+cd zad4/echo_gorm || exit 1
+
+golangci-lint run ./...
+if [ $? -ne 0 ]; then
+  echo "Lint errors for Go found in zad4. Fix them before commit."
+  exit 1
+fi
+
