@@ -7,6 +7,8 @@ import (
 	"net/http"
 )
 
+const basketNotFoundErrorMessage = "Basket not found"
+
 func CreateBasket(c echo.Context) error {
 	var basket models.Basket
 	if err := c.Bind(&basket); err != nil {
@@ -31,7 +33,7 @@ func GetBasket(c echo.Context) error {
 	var basket models.Basket
 
 	if err := db.DB.Preload("Products").First(&basket, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Basket not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": basketNotFoundErrorMessage})
 	}
 
 	return c.JSON(http.StatusOK, basket)
@@ -42,7 +44,7 @@ func DeleteBasket(c echo.Context) error {
 	var basket models.Basket
 
 	if err := db.DB.First(&basket, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Basket not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": basketNotFoundErrorMessage})
 	}
 
 	if err := db.DB.Delete(&basket).Error; err != nil {
@@ -56,7 +58,7 @@ func AddToBasket(c echo.Context) error {
 	var basket models.Basket
 
 	if err := db.DB.First(&basket, basketID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Basket not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": basketNotFoundErrorMessage})
 	}
 
 	productID := c.Param("product_id")
@@ -78,7 +80,7 @@ func RemoveFromBasket(c echo.Context) error {
 	var basket models.Basket
 
 	if err := db.DB.First(&basket, basketID).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Basket not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": basketNotFoundErrorMessage})
 	}
 
 	productID := c.Param("product_id")

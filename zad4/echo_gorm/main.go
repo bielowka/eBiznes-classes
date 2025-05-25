@@ -11,18 +11,27 @@ func main() {
 
 	db.ConnectDatabase()
 
-	echoInstance.POST("/products", handlers.CreateProduct)
-	echoInstance.GET("/products", handlers.GetProducts)
-	echoInstance.GET("/products/:id", handlers.GetProduct)
-	echoInstance.PUT("/products/:id", handlers.UpdateProduct)
-	echoInstance.DELETE("/products/:id", handlers.DeleteProduct)
+	const (
+		productPath       = "/products"
+		productIDPath     = "/products/:id"
+		basketPath        = "/baskets"
+		basketIDPath      = "/baskets/:id"
+		addProductPath    = "/baskets/:id/add-product/:product_id"
+		removeProductPath = "/baskets/:id/delete-product/:product_id"
+	)
 
-	echoInstance.POST("/baskets", handlers.CreateBasket)
-	echoInstance.GET("/baskets", handlers.GetBaskets)
-	echoInstance.GET("/baskets/:id", handlers.GetBasket)
-	echoInstance.DELETE("/baskets/:id", handlers.DeleteBasket)
-	echoInstance.POST("/baskets/:id/add-product/:product_id", handlers.AddToBasket)
-	echoInstance.POST("/baskets/:id/delete-product/:product_id", handlers.RemoveFromBasket)
+	echoInstance.POST(productPath, handlers.CreateProduct)
+	echoInstance.GET(productPath, handlers.GetProducts)
+	echoInstance.GET(productIDPath, handlers.GetProduct)
+	echoInstance.PUT(productIDPath, handlers.UpdateProduct)
+	echoInstance.DELETE(productIDPath, handlers.DeleteProduct)
+
+	echoInstance.POST(basketPath, handlers.CreateBasket)
+	echoInstance.GET(basketPath, handlers.GetBaskets)
+	echoInstance.GET(basketIDPath, handlers.GetBasket)
+	echoInstance.DELETE(basketIDPath, handlers.DeleteBasket)
+	echoInstance.POST(addProductPath, handlers.AddToBasket)
+	echoInstance.POST(removeProductPath, handlers.RemoveFromBasket)
 
 	echoInstance.Logger.Fatal(echoInstance.Start(":8080"))
 }

@@ -7,6 +7,8 @@ import (
 	"net/http"
 )
 
+const productNotFoundErrorMessage = "Product not found"
+
 func CreateProduct(c echo.Context) error {
 	var product models.Product
 	if err := c.Bind(&product); err != nil {
@@ -28,7 +30,7 @@ func GetProduct(c echo.Context) error {
 	var product models.Product
 
 	if err := db.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Product not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": productNotFoundErrorMessage})
 	}
 
 	return c.JSON(http.StatusOK, product)
@@ -39,7 +41,7 @@ func UpdateProduct(c echo.Context) error {
 	var product models.Product
 
 	if err := db.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Product not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": productNotFoundErrorMessage})
 	}
 
 	if err := c.Bind(&product); err != nil {
@@ -55,7 +57,7 @@ func DeleteProduct(c echo.Context) error {
 	var product models.Product
 
 	if err := db.DB.First(&product, id).Error; err != nil {
-		return c.JSON(http.StatusNotFound, echo.Map{"error": "Product not found"})
+		return c.JSON(http.StatusNotFound, echo.Map{"error": productNotFoundErrorMessage})
 	}
 
 	db.DB.Delete(&product)
