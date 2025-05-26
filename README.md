@@ -92,7 +92,7 @@ Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad6
 
 **Zadanie 7** Sonar
 
-:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/497e667ae546330a9aefeeadf097b832170f49a0) [kopia hooka do wglądu](https://github.com/bielowka/eBiznes-classes/commit/497e667ae546330a9aefeeadf097b832170f49a0)
+:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/497e667ae546330a9aefeeadf097b832170f49a0) [kopia hooka do wglądu](https://github.com/bielowka/eBiznes-classes/commit/b04c350e89694f1d8c15054e60345026a8b99f65)
 
 :white_check_mark: 3.5 wymaganie 2 [Link do commita 2](https://github.com/bielowka/eBiznes-classes/commit/d74b587785ed76ff27150fe870a120afc3fd9760)
 
