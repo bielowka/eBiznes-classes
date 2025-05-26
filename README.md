@@ -89,3 +89,18 @@ Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad5
 
 
 Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad6
+
+**Zadanie 7** Sonar
+
+:white_check_mark: 3.0 wymaganie 1 [Link do commita 1](https://github.com/bielowka/eBiznes-classes/commit/497e667ae546330a9aefeeadf097b832170f49a0) [kopia hooka do wglądu](https://github.com/bielowka/eBiznes-classes/commit/497e667ae546330a9aefeeadf097b832170f49a0)
+
+:white_check_mark: 3.5 wymaganie 2 [Link do commita 2](https://github.com/bielowka/eBiznes-classes/commit/d74b587785ed76ff27150fe870a120afc3fd9760)
+
+:white_check_mark: 4.0 wymaganie 3 [Link do commita 3](https://github.com/bielowka/eBiznes-classes/commit/8f73f764cdb389245bfde7c50f5a5e18f2baeac5)[Link do commita 4](https://github.com/bielowka/eBiznes-classes/commit/7277fa3dcf47a2fe78e139d57acbc1fbabc80c40)
+
+:x: 4.5 wymaganie 4
+
+:x: 5.0 wymaganie 5
+
+
+Kod: https://github.com/bielowka/eBiznes-classes/tree/main/zad7
